@@ -1,4 +1,4 @@
 conv2047
 ========
 
-RFC 2047 Unicode e-mail header field converter.
+A very simple RFC 2047 Unicode e-mail header field converter. It is based on Encode Perl module.
