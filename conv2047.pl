@@ -2,7 +2,7 @@
 #
 # A very simple RFC 2047 Unicode e-mail header field converter.
 #
-# Copyright (C) 2010 Stanislaw Findeisen <stf at eisenbits.com>
+# Copyright (C) 2010,2014 Stanislaw Findeisen <stf at eisenbits.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,8 +31,8 @@ use POSIX qw(strftime locale_h);
 use Encode qw/encode decode/;
 
 use constant {
-    VERSION      => '0.1',
-    VERSION_DATE => '2010-10-28'
+    VERSION      => '0.2',
+    VERSION_DATE => '2014-12-16'
 };
 
 use Getopt::Long;
