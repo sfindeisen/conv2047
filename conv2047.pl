@@ -162,7 +162,7 @@ my $k = 0;
 while (my $line = <>) {
     chomp($line);
     $line = decode('UTF-8', $line);
-    $line = normalizeSpace($line);
+    #$line = normalizeSpace($line);
     # debug("[$k] got line [1]: $line");
 
     $line = ($wantDecode ? (decode('MIME-Header', $line)) : (encode('MIME-Header', $line)));
