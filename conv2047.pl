@@ -20,6 +20,7 @@
 # Changes history:
 #
 # 2010-10-28 (STF) Initial version.
+# 2014-12-16 (STF) Support for raw e-mails (fix from David Gauchard)
 
 use warnings;
 use strict;
@@ -134,14 +135,6 @@ Example:
 ENDHELP
 }
 
-sub normalizeSpace {
-    my $line = shift;
-    $line =~ s/[\s]+/ /gso;
-    $line =~ s/^[\s]*//gso;
-    $line =~ s/[\s]$//gso;
-    return $line;
-}
-
 ####################################
 # The program - main
 ####################################
@@ -162,7 +155,6 @@ my $k = 0;
 while (my $line = <>) {
     chomp($line);
     $line = decode('UTF-8', $line);
-    #$line = normalizeSpace($line);
     # debug("[$k] got line [1]: $line");
 
     $line = ($wantDecode ? (decode('MIME-Header', $line)) : (encode('MIME-Header', $line)));
